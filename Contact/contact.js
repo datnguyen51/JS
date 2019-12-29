@@ -60,7 +60,10 @@ function findContact()
     var f = readLineSync.question("Nhap ten hoac sdt lien he can tim: ");
     for (contact of contacts)
     {
-        if(contact.name === f || contact.phone_number === )
+        if(contact.name.toLowerCase() === f.normalize('NFD').replace(/[\u0300-\u036f]/g, '') || contact.phone_number.indexOf(f) !== -1)
+        {
+            console.log(contact.name + "\t" + contact.phone_number);
+        }
     }
 }
 

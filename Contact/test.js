@@ -9,6 +9,8 @@ var readLineSync = require('readline-sync');
 
 // console.log(contacts);
 // 
-var n = '3123123123123';
+var n = '321321321';
 
-console.log('321312' in n);
+var a = n.indexOf('321');
+
+console.log(a);
